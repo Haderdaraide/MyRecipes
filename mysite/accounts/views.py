@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from register.forms import RegistrationForm
+from accounts.forms import RegistrationForm
 from django.contrib.auth.models import User
 
 def register(request):
@@ -14,8 +14,12 @@ def register(request):
         form = RegistrationForm()
 
         args = {'form': form}
-        return render(request, 'register/register.html', args)
+        return render(request, 'accounts/register.html', args)
 
-#def profile(request):
-    #args = {'user': request.user}
+def view_profile(request):
+    return render(request, 'accounts/view_profile.html')
+
+def edit_profile(request):
+    pass
+
 
