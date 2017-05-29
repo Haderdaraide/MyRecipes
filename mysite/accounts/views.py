@@ -22,7 +22,7 @@ def register(request):
 
 def view_profile(request):
     if request.method == 'POST':
-        return redirect('/profile/edit/')
+        return redirect('/accounts/edit/')
 
     else:
         args = {'user': request.user}
@@ -50,7 +50,7 @@ def change_password(request):
             update_session_auth_hash(request, form.user)
             return redirect('/profile')
         else:
-            return redirect('/profile/change-password/')
+            return redirect('/accounts/change-password/')
 
     else:
         form = PasswordChangeForm(user=request.user)
