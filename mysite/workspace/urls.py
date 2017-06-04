@@ -8,6 +8,9 @@ from django.contrib.auth.views import (
 
 urlpatterns = [
     url(r'^$', views.view_workspace, name='view_workspace'),
+    url(r'^my_recipes/$', views.my_recipes, name='my_recipes'),
+    url(r'^add_recipe/$', views.add_recipe, name='add_recipe'),
+    url(r'^view_profile/$', views.view_profile, name='view_profile')
 ]
 
 

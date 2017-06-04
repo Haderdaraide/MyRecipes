@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="{% static 'personal/css/login.css' %}" type = "text/css"/>
 
 	<!-- Custom Fonts -->
+	<link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -31,11 +32,55 @@
 
 <!-- colors I liked: #3f3c42 (greyish black)
 					 #ffffff (white)
-
  -->
 
+<!-- original <body> before rework
 <body class="body" style="background-color:#ffffff">
+-->
+
+<body id="page-top" class="index">
+
 	<div class="container">
+
+		<!-- Navigation -->
+        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+			<div class="container">
+				<div class="container">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+				</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="hidden">
+								<a href="#page-top"></a>
+							</li>
+							<li>
+								<a class="page-scroll" href="#services">Services</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="#portfolio">Portfolio</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="#about">About</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="#team">Team</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="#contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+				<!-- /.navbar-collapse -->
+			</div>
+				<!-- /.container-fluid -->
+		</nav>
+
+		<!-- Old Nav
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -48,17 +93,18 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-left">
-						<li><a href='/workspace/'>Dashboard</a></li>
+						<li><a href="/">Home</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href='/workspace/my_recipes/'>My Recipes</a></li>
-						<li><a href='/workspace/add_recipe/'>Add Recipe</a></li>
-						<li><a href='/workspace/view_profile/'>Profile</a></li>
-						<li><a href='/accounts/logout/'>Logout</a></li>
+						<li><a href='/profile/login/'>Login</a></li>
+						<li><a href='/profile/register/'>Register</a></li>
+						<li><a href='/profile/'>Profile</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
+-->
+
 	  <div class="col-sm-10">
 
 		<div class='container-fluid'>
