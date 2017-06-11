@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from workspace.forms import AddRecipeForm
 
 # Create your views here.
 
@@ -15,11 +16,18 @@ def my_recipes(request):
 
 
 def add_recipe(request):
-    args = {'user': request.user}
-    return render(request, 'workspace/add_recipe.html', args)
+    if request.method == 'POST':
+        form = AddRecipeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/workspace/')
+
+    else:
+        form = AddRecipeForm
+
+    return render(request, 'workspace/add_recipe.html', {'form': form})
 
 
 def view_profile(request):
     args = {'user': request.user}
     return render(request, 'workspace/view_profile.html', args)
-
